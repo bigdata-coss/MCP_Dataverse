@@ -1,23 +1,26 @@
 {
-  "name": "book",
+  "type": "module",
+  "name": "book-mcp",
   "version": "1.0.0",
   "description": "이 프로젝트는 한국 중앙도서관 API를 Model Context Protocol (MCP)과 통합하는 서버입니다. 이를 통해 AI 모델이 도서관의 도서 정보에 접근하고 검색할 수 있습니다.",
   "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "start": "node --loader ts-node/esm index.ts",
+    "start": "node dist/index.js",
     "dev": "tsc --watch"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "module",
   "dependencies": {
-    "@anthropic-ai/sdk": "^0.18.0",
-    "@types/node": "^20.11.19",
-    "axios": "^1.8.4",
-    "sparql-http-client": "^3.0.1",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.3.3"
+    "@modelcontextprotocol/sdk": "^1.9.0",
+    "zod": "^3.24.2",
+    "axios": "^1.6.8",
+    "sparql-http-client": "^2.4.2"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "ts-node": "^10.9.0",
+    "@types/node": "^20.0.0"
   }
 }
