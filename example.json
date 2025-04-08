@@ -1,0 +1,27 @@
+{
+    "mcpServers": {
+      "filesystem": {
+        "command": "npx",
+        "args": [
+          "-y",
+          "@modelcontextprotocol/server-filesystem",
+          "/Users/anthonyahn/Documents/codes/dataverse_mcp",
+          "/Users/anthonyahn/Documents",
+          "/Users/anthonyahn/Downloads"
+        ]
+      },
+      "youtube-transcript": {
+        "command": "npx",
+        "args": ["-y", "@kimtaeyoon83/mcp-server-youtube-transcript"]
+      },
+      "dataverse": {
+        "command": "node",
+        "args": ["/Users/anthonyahn/Documents/codes/dataverse_mcp/dist/index.js"],
+        "env": {
+          "DATAVERSE_API_URL": "https://dataverse.harvard.edu/api/",
+          "DATAVERSE_API_KEY": "cefecf1a-b027-44d9-9f55-560011d88774"
+        }
+      }
+    }
+  }
+  

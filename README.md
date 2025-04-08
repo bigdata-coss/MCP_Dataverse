@@ -1,108 +1,23 @@
-# Dataverse MCP Server
+# MCP Servers Collection
 
-This project integrates the Harvard Dataverse API with the Model Context Protocol (MCP), enabling AI models to access and search datasets in Dataverse.
+이 저장소는 다양한 MCP 서버들의 모음입니다.
 
-## Features
+## 서버 목록
 
-- **Dataset Search**: Search for datasets or files using keywords
-- **Dataset Retrieval**: Retrieve detailed information about a specific dataset using its ID
-- **Dataset Download**: Download all files from a dataset
-- **File Download**: Download specific files in various formats
-- **Curation Label Management**: Manage the curation status of datasets
+### 1. Dataverse MCP Server
+- Harvard Dataverse API를 Model Context Protocol (MCP)과 통합하는 서버
+- 데이터셋 검색, 다운로드, 큐레이션 레이블 관리 기능 제공
+- [자세히 보기](./dataverse/README.md)
 
-## Installation
+### 2. National Library MCP Server (개발 중)
+- 한국 중앙도서관 API를 Model Context Protocol (MCP)과 통합하는 서버
+- 도서 검색, 대출, 예약 기능 제공 예정
+- [자세히 보기](./book/README.md)
 
-```bash
-npm install
-```
+## 설치 및 실행
 
-## Environment Variables
+각 서버의 설치 및 실행 방법은 해당 폴더의 README.md 파일을 참조하세요.
 
-Before running the server, you need to set the following environment variables:
-
-- `DATAVERSE_API_KEY`: Dataverse API key (required)
-- `DATAVERSE_API_URL`: Dataverse API URL (optional, default: https://dataverse.harvard.edu/api/)
-
-## Configuration
-
-Add the following configuration to your MCP server configuration file:
-
-```json
-{
-  "mcpServers": {
-    "dataverse": {
-      "command": "node",
-      "args": ["/path/to/dist/index.js"],
-      "env": {
-        "DATAVERSE_API_URL": "https://dataverse.harvard.edu/api/",
-        "DATAVERSE_API_KEY": "your_api_key_here"
-      }
-    }
-  }
-}
-```
-
-## Running the Server
-
-```bash
-npm start
-```
-
-## API Endpoints
-
-### Tools
-
-- `search`: Search for datasets or files
-  - Parameters:
-    - `query`: Search term (string)
-    - `type`: Search type ("dataset" or "file", default: "dataset")
-    - `per_page`: Results per page (1-100, default: 10)
-
-- `downloadDataset`: Download all files from a dataset
-  - Parameters:
-    - `datasetId`: Dataset ID or DOI (string)
-    - `version`: Version to download (optional, default: latest version)
-    - `format`: File format ("original" or "archival", default: "archival")
-    - `usePid`: Whether to use DOI (optional, default: false)
-
-- `downloadFile`: Download a specific file
-  - Parameters:
-    - `fileId`: File ID or DOI (string)
-    - `format`: File format ("original", "RData", "prep", "subset", optional)
-    - `variables`: List of variables to download (optional, only for "subset" format)
-    - `usePid`: Whether to use DOI (optional, default: false)
-
-- `getCurationLabel`: Get a dataset's curation label
-  - Parameters:
-    - `datasetId`: Dataset ID or DOI (string)
-    - `usePid`: Whether to use DOI (optional, default: false)
-
-- `setCurationLabel`: Set a dataset's curation label
-  - Parameters:
-    - `datasetId`: Dataset ID or DOI (string)
-    - `label`: Label to set (string)
-    - `usePid`: Whether to use DOI (optional, default: false)
-
-- `deleteCurationLabel`: Delete a dataset's curation label
-  - Parameters:
-    - `datasetId`: Dataset ID or DOI (string)
-    - `usePid`: Whether to use DOI (optional, default: false)
-
-### Resources
-
-- `dataverse://dataset/{id}`: Retrieve a specific dataset by ID
-
-## Error Handling
-
-The server handles the following error scenarios:
-
-- Missing API key
-- API request failure
-- Invalid dataset ID
-- Search parameter errors
-- Curation label setting errors
-- File download errors
-
-## License
+## 라이선스
 
 MIT 
