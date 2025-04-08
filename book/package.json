@@ -14,8 +14,10 @@
   "type": "module",
   "dependencies": {
     "@anthropic-ai/sdk": "^0.18.0",
-    "typescript": "^5.3.3",
+    "@types/node": "^20.11.19",
+    "axios": "^1.8.4",
+    "sparql-http-client": "^3.0.1",
     "ts-node": "^10.9.2",
-    "@types/node": "^20.11.19"
+    "typescript": "^5.3.3"
   }
 }

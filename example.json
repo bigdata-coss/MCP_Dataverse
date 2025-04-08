@@ -16,10 +16,18 @@
       },
       "dataverse": {
         "command": "node",
-        "args": ["/Users/anthonyahn/Documents/codes/dataverse_mcp/dist/index.js"],
+        "args": ["/Users/anthonyahn/Documents/codes/dataverse_mcp/dataverse/dist/index.js"],
         "env": {
           "DATAVERSE_API_URL": "https://dataverse.harvard.edu/api/",
-          "DATAVERSE_API_KEY": "cefecf1a-b027-44d9-9f55-560011d88774"
+          "DATAVERSE_API_KEY": "your_dataverse_api_key_here"
+        }
+      },
+      "book": {
+        "command": "node",
+        "args": ["/Users/anthonyahn/Documents/codes/dataverse_mcp/book/dist/index.js"],
+        "env": {
+          "LIBRARY_API_URL": "https://lod.nl.go.kr/home/tutorial/json/openapi.do",
+          "SPARQL_ENDPOINT": "https://lod.nl.go.kr/sparql"
         }
       }
     }
