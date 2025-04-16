@@ -1,0 +1,12 @@
+[project]
+name = "mcp-hwp"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "bs4>=0.0.2",
+    "markdown>=3.8",
+    "mcp[cli]>=1.6.0",
+    "pyhwpx>=0.51.2",
+]
