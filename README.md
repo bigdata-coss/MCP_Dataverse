@@ -9,7 +9,7 @@
 - 데이터셋 검색, 다운로드, 큐레이션 레이블 관리 기능 제공
 - [자세히 보기](./dataverse/README.md)
 
-### 2. National Library MCP Server
+### 2. National Library MCP Server (도서 예약 기능 개발 중)
 - 한국 중앙도서관 API를 Model Context Protocol (MCP)과 통합하는 서버
 - 도서 검색, 대출, 예약 기능 제공
 - [자세히 보기](./book/README.md)
@@ -19,7 +19,7 @@
 - SPARQL 쿼리를 통한 지식 검색 및 추론 기능 제공
 - [자세히 보기](./ontology_mcp/README.md)
 
-### 4. HWP MCP Server
+### 4. HWP MCP Server (서식 및 마크다운 변환 기능 개발 중)
 - 한글 문서(HWP)를 처리하는 Model Context Protocol (MCP) 서버
 - HWP 문서 파싱, 내용 추출 및 변환 기능 제공
 - [자세히 보기](./hwp/mcp-hwp/README.md)
